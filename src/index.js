@@ -39,7 +39,7 @@ async function checkWeather(city) {
     weatherIcon.src = "images/mist.png";
   } else if (data.weather[0].description == "moderate rain") {
     weatherIcon.src = "images/moderate.png";
-  } else if (data.weather[0].description == "heavy rain") {
+  } else if (data.weather[0].description == "heavy intensity rain") {
     weatherIcon.src = "images/heavyrain.png";
   } else if (data.weather[0].description == "overcast clouds") {
     weatherIcon.src = "images/overcast.png";
