@@ -4,60 +4,57 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/style.css" />
-    <title>Weather-App</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <title><Weather-App></title>
   </head>
   <body>
-    <div class="card">
+    <div class="weather-app">
       <header>
-        <form id="search-form">
-      <div class="search">
-        <input 
-        type="text" 
-        placeholder="Enter a city.."
-        required 
-        class="search-input"
-        id="search-input"
-        />
-      <input type="submit" value="Search" class="search-button" />
-      </form>
-      </div>
+        <form class="search-form" id="search-form">
+          <input
+            type="search"
+            placeholder="Enter a city.."
+            required
+            id="search-form-input"
+            class="search-form-input"
+          />
+          <input type="submit" value="Search" class="search-form-button" />
+        </form>
       </header>
       <main>
-      <div class="weather">
-      <img src="images/clear.png" class="weather-icon" />
-      <h1 class="temp">24°C</h1>
-      <h2 class="city">Paris</h2>
-      <h3 class="description">Clear sky</h3>
-      <div class="details">
-      <div class="col">
-      <img src="images/humidity.png">
-    <div>
-      <p class="humidity">87%</p>
-      <p>Humidity</p>
-    </div>
-      </div>
-    <div class="col">
-    <img src="images/wind.png">
-    <div>
-      <p class="wind">7.2 km/h</p>
-      <p>Wind speed</p>
-    </div>
-  </main>
-  <footer>
-        <p>
-          This project was coded by
-          <a href="https://github.com/Thendow" target="_blank"
-            >Thendo</a
-          >
-          and is on
-          <a href="https://github.com/Thendow/weather.forecast" target="_blank">GitHub</a
-          >
-          and hosted on
-          <a href="https://thendo-weatherapp.netlify.app/" target="_blank"
-            >Netlify</a
-          >
-        </p>
+        <div class="weather-app-data">
+          <div>
+            <h1 class="weather-app-city" id="city"></h1>
+            <p class="weather-app-details">
+              <span id="time"></span>,
+              <span id="description"></span>
+              <br />
+              Humidity: <strong id="humidity"></strong>, Wind:
+              <strong id="wind-speed"></strong>
+            </p>
+          </div>
+          <div class="weather-app-temperature-container">
+            <div id="icon"></div>
+            <div class="weather-app-temperature" id="temperature"></div>
+            <div class="weather-app-unit">°C</div>
+          </div>
+        </div>
+        <div class="weather-forecast" id="forecast"></div>
+      </main>
+
+      <footer>
+        This project was coded by
+        <a href="https://github.com/Thendow" target="_blank">Thendo</a>
+        and is on
+        <a href="https://github.com/Thendow/weather.forecast" target="_blank"
+          >GitHub</a
+        >
+        and hosted on
+        <a href="https://thendo-weatherapp.netlify.app/" target="_blank"
+          >Netlify</a
+        >
       </footer>
+    </div>
+    <script src="src/index.js"></script>
   </body>
-  <script src="src/index.js"></script>
 </html>
